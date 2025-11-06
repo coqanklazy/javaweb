@@ -1,4 +1,4 @@
-FROM maven:4.0.0-rc-4-ibm-semeru-17-noble AS builder
+FROM maven:3.9-eclipse-temurin-21 AS builder
 WORKDIR /deployServletProject
 COPY . .
 RUN mvn clean package -DskipTests
