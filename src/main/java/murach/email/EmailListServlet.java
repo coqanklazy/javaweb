@@ -27,7 +27,8 @@ public class EmailListServlet extends HttpServlet{
                 String firstName = request.getParameter("firstName");
                 String lastName = request.getParameter("lastName");
                 String email = request.getParameter("email");
-                User user = new User(firstName, lastName, email);
+                String dateOfBirth = request.getParameter("dateOfBirth");
+                User user = new User(firstName, lastName, email, dateOfBirth);
                 //UserDB.insert(user);
                 request.setAttribute("user", user);
                 url = "/thanks.jsp";

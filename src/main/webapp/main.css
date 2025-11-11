@@ -7,10 +7,14 @@ body{
 h1{
     color: teal;
 }
+h2{
+    color: teal;
+}
 label{
     float: left;
     width: 6em;
     margin-bottom: 0.5em;
+    font-weight: bold;
 }
 input[type="text"], input[type="email"] {
     width: 15em;
@@ -22,4 +26,23 @@ br{
 }
 #submit{
     margin-left: 0.5em;
+}
+img {
+    display: block;
+    margin-bottom: 1em;
+}
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    float: none;
+    width: auto;
+    margin-right: 1em;
+    font-weight: normal;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin-left: 0;
+}
+
+select {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
 }
