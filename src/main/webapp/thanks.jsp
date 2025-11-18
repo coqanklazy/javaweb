@@ -15,7 +15,7 @@
         <span>${user.firstName} </span><br>
         <label>Last Name:</label>
         <span>${user.lastName}</span><br>
-        <lebel>Date of birth:</lebel>
+        <label>Date of birth:</label>
         <span>${user.dateOfBirth}</span><br>
     <p>To enter another email address, click on the Back button in your browser or the Return button shown below.</p>
         <form action="" method="get">
