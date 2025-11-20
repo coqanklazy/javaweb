@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 public class LineItem implements Serializable {
     private Product product;
@@ -36,7 +37,7 @@ public class LineItem implements Serializable {
     }
 
     public String getTotalCurrencyFormat() {
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.US);
         return currency.format(getTotal());
     }
 }

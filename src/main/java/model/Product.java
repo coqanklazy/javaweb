@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 public class Product implements Serializable {
     private String code;
@@ -42,7 +43,7 @@ public class Product implements Serializable {
     }
 
     public String getPriceCurrencyFormat() {
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.US);
         return currency.format(price);
     }
 }
