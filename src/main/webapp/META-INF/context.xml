@@ -4,9 +4,10 @@
     <Resource name="jdbc/murach" auth="Container"
               driverClassName="com.mysql.cj.jdbc.Driver"
               url="jdbc:mysql://mysql-35e9f5d5-truongconganh5575-46a6.g.aivencloud.com:24419/murach?autoReconnect=true"
-              username="avnadmin" password="AVNS_HQBV0sQYFdS5vf7bfQH"
+              username="${AIVEN_USERNAME}" password="${AIVEN_PASSWORD}"
               maxActive="100" maxIdle="30" maxWait="10000"
               logAbandoned="true" removeAbandoned="true"
               removeAbandonedTimeout="60" type="javax.sql.DataSource" />
+
 
 </Context>
