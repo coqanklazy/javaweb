@@ -1,26 +1,29 @@
-<!doctype html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Murach's Java Servlets and JSP</title>
-        <link rel="stylesheet" href="main.css" type="text/css"/>
-    </head>
-    <body>
-    <h1>Thanks for joining our email list</h1>
+<head>
+    <meta charset="utf-8">
+    <title>Murach's Java Servlets and JSP</title>
+    <link rel="stylesheet" href="db.css" type="text/css"/>
+</head>
+<body>
 
-    <p>Here is the information that you entered:</p>
-        <label>Email:</label>
-        <span>${user.email}</span><br>
-        <label>First Name:</label>
-        <span>${user.firstName} </span><br>
-        <label>Last Name:</label>
-        <span>${user.lastName}</span><br>
-        <label>Date of birth:</label>
-        <span>${user.dateOfBirth}</span><br>
-    <p>To enter another email address, click on the Back button in your browser or the Return button shown below.</p>
-        <form action="" method="get">
-            <input type="hidden" name="action" value="join">
-            <input type="submit" value="Return">
-        </form>
-    </body>
+<c:if test="${sqlStatement == null}">
+    <c:set var="sqlStatement" value="select * from User" />
+</c:if>
+
+<h1>The SQL Gateway</h1>
+<p>Enter an SQL statement and click the Execute button.</p>
+<p><b>SQL statement:</b></p>
+<form action="sqlGateway" method="post">
+    <textarea name="sqlStatement" cols="60" rows="8">${sqlStatement}</textarea>
+    <input type="submit" value="Execute">
+</form>
+
+<p><b>SQL result:</b></p>
+${sqlResult}
+
+
+</body>
 </html>

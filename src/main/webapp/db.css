@@ -1,0 +1,98 @@
+body{
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 2em auto;
+    max-width: 900px;
+    background: #f4f7f9;
+    color: #333;
+}
+
+h1{
+    color: #008080;
+    margin-bottom: 0.5em;
+    font-size: 28px;
+}
+
+p{
+    line-height: 1.5;
+}
+
+form {
+    margin-top: 1em;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+textarea {
+    width: 100%;
+    font-size: 14px;
+    font-family: Consolas, monospace;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    resize: vertical;
+    transition: 0.25s;
+}
+
+textarea:focus {
+    border-color: #008080;
+    box-shadow: 0 0 6px rgba(0,128,128,0.3);
+}
+
+input[type="submit"] {
+    margin-top: 12px;
+    padding: 10px 20px;
+    border: none;
+    background: #008080;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+input[type="submit"]:hover {
+    background: #006666;
+}
+
+/* SQL Result Box */
+.sql-result-box {
+    margin-top: 1.5em;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    border-left: 4px solid #008080;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    white-space: pre-wrap;
+    font-family: Consolas, monospace;
+}
+
+/* Table nếu sqlResult trả về table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th {
+    background: #008080;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+table tr:hover {
+    background: #f0fafa;
+}
