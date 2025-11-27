@@ -2,9 +2,9 @@
 <Context path="/ch12email">
 
     <Resource name="jdbc/murach" auth="Container"
-              driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://localhost:3306/murach?autoReconnect=true"
-              username="root" password="123456"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://mysql-35e9f5d5-truongconganh5575-46a6.g.aivencloud.com:24419/murach?autoReconnect=true"
+              username="avnadmin" password="AVNS_HQBV0sQYFdS5vf7bfQH"
               maxActive="100" maxIdle="30" maxWait="10000"
               logAbandoned="true" removeAbandoned="true"
               removeAbandonedTimeout="60" type="javax.sql.DataSource" />

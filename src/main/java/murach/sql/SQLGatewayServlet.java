@@ -21,9 +21,9 @@ public class SQLGatewayServlet extends HttpServlet {
         String sqlResult = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String dbURL = "jdbc:mysql://localhost:3306/murach";
-            String username = "root";
-            String password = "123456";
+            String dbURL = "jdbc:mysql://mysql-35e9f5d5-truongconganh5575-46a6.g.aivencloud.com:24419/murach?autoReconnect=true";
+            String username = "avnadmin";
+            String password = "AVNS_HQBV0sQYFdS5vf7bfQH";
             Connection connection = DriverManager.getConnection(
                     dbURL, username, password);
 
