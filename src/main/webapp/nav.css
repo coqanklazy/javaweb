@@ -1,0 +1,28 @@
+/* Navigation Header Styles - Shared across all pages */
+.nav-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 2px solid #008080;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #008080;
+    background-color: #f0f0f0;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #008080;
+    color: white;
+}
+
+.nav-btn.active {
+    background-color: #008080;
+    color: white;
+}

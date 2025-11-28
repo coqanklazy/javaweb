@@ -6,8 +6,10 @@
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
     <link rel="stylesheet" href="db.css" type="text/css"/>
+    <link rel="stylesheet" href="nav.css" type="text/css"/>
 </head>
 <body>
+<jsp:include page="header.jsp" />
 
 <c:if test="${sqlStatement == null}">
     <c:set var="sqlStatement" value="select * from User" />
