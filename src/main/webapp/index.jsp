@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
     <link rel="stylesheet" href="main.css" type="text/css"/>
+    <link rel="stylesheet" href="nav.css" type="text/css"/>
 </head>
 <body>
+<jsp:include page="header.jsp" />
 <h1>Join our email list</h1>
 <p>To join our email list, enter your name and
     email address below.</p>
