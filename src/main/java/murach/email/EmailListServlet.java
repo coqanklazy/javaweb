@@ -9,7 +9,14 @@ import murach.business.User;
 import murach.data.UserDB;
 @WebServlet("/emailList")
 public class EmailListServlet extends HttpServlet {
-
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String url = "/index.jsp";
+        getServletContext()
+                .getRequestDispatcher(url)
+                .forward(request, response);
+    }
     @Override
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response)
@@ -44,7 +51,7 @@ public class EmailListServlet extends HttpServlet {
             }
             else {
                 message = "";
-                url = "/thanks.jsp";
+                url = "/emailThanks.jsp";
                 UserDB.insert(user);
             }
             request.setAttribute("user", user);

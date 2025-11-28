@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="main.css" type="text/css"/>
 </head>
 <body>
+<%@ include file="/includes/header.jsp" %>
 <h1>Join our email list</h1>
 <p>To join our email list, enter your name and
     email address below.</p>
