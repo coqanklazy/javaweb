@@ -12,8 +12,9 @@
     <h1>User Detail</h1>
     <form action="userAdmin" method="post" class="panel">
         <input type="hidden" name="action" value="update_user"/>
+        <input type="hidden" name="email" value="${user.email}"/>
         <label>Email:</label>
-        <input type="email" name="email" value="${user.email}" disabled/><br>
+        <input type="email" value="${user.email}" disabled/><br>
         <label>First Name:</label>
         <input type="text" name="firstName" value="${user.firstName}" required/><br>
         <label>Last Name:</label>
@@ -21,7 +22,9 @@
         <label>&nbsp;</label>
         <input type="submit" value="Update" class="button accent"/>
     </form>
-    <p><a class="button" href="userAdmin">Back to list</a></p>
+    <p>
+        <a class="button" href="userAdmin?action=display_users">Back to list</a>
+    </p>
 </div>
 </body>
 </html>

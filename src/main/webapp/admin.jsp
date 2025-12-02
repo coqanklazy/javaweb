@@ -27,7 +27,7 @@
 
 </table>
 
-<p><a href="userAdmin">Refresh</a></p>
+<p><a href="userAdmin?action=display_users">Refresh User List</a></p>
 
 </body>
 </html>
