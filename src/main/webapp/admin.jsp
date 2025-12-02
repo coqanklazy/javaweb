@@ -27,7 +27,7 @@
 
 </table>
 
-<p><a href="${pageContext.request.contextPath}/userAdmin">Refresh</a></p>
+<p><a href="userAdmin">Refresh</a></p>
 
 </body>
 </html>
