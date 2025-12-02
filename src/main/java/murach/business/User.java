@@ -1,22 +1,35 @@
 package murach.business;
 
-import java.io.Serializable;
+import javax.persistence.Entity;
 
+import java.io.Serializable;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
 public class User implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String email;
     private String firstName;
     private String lastName;
-    private String email;
 
-    public User(String firstName, String lastName, String email) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.email = email;
-        }
 
-    public User() {
-        this.firstName = "";
-        this.lastName = "";
-        this.email = "";
+    public Long getUserId() {
+        return id;
+    }
+
+    public void setUserId(Long id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getFirstName() {
@@ -33,13 +46,5 @@ public class User implements Serializable {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 }

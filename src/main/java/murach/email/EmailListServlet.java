@@ -7,21 +7,13 @@ import javax.servlet.http.*;
 
 import murach.business.User;
 import murach.data.UserDB;
-@WebServlet("/emailList")
 public class EmailListServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        String url = "/index.jsp";
-        getServletContext()
-                .getRequestDispatcher(url)
-                .forward(request, response);
-    }
+
     @Override
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response)
             throws ServletException, IOException {
-        String url = "/index.html";
+        String url = "/index.jsp";
 
         // get current action
         String action = request.getParameter("action");
@@ -40,10 +32,13 @@ public class EmailListServlet extends HttpServlet {
             String email = request.getParameter("email");
 
             // store data in User object
-            User user = new User(firstName, lastName, email);
+            User user = new User();
+            user.setEmail(email);
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
 
             // validate the parameters
-            String message = "";
+            String message;
             if (UserDB.emailExists(user.getEmail())) {
                 message = "This email address already exists.<br>" +
                         "Please enter another email address.";
@@ -60,5 +55,11 @@ public class EmailListServlet extends HttpServlet {
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doPost(request, response);
     }
 }

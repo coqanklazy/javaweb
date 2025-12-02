@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/ch12email">
+<Context path="/ch13email">
 
     <Resource name="jdbc/murach" auth="Container"
               driverClassName="com.mysql.cj.jdbc.Driver"

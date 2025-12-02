@@ -1,6 +1,4 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div style="display:flex;gap:10px;align-items:center;margin:12px 0;">
+<div class="nav-bar">
     <form action="emailList" method="get" style="margin:0;">
         <input type="hidden" name="action" value="join"/>
         <button type="submit">Email List</button>
@@ -10,3 +8,4 @@
         <button type="submit">Load Users</button>
     </form>
 </div>
+

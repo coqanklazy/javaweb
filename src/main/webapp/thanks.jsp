@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="db.css" type="text/css"/>
 </head>
 <body>
-<%@ include file="/includes/header.jsp" %>
 
 <c:if test="${sqlStatement == null}">
     <c:set var="sqlStatement" value="select * from User" />

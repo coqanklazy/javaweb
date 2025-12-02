@@ -4,20 +4,24 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
-        <servlet-name>DownloadServlet</servlet-name>
-        <servlet-class>murach.download.DownloadServlet</servlet-class>
+        <servlet-name>EmailListServlet</servlet-name>
+        <servlet-class>murach.email.EmailListServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
-        <servlet-name>DownloadServlet</servlet-name>
-        <url-pattern>/download</url-pattern>
+        <servlet-name>EmailListServlet</servlet-name>
+        <url-pattern>/emailList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UsersServlet</servlet-name>
+        <servlet-class>murach.admin.UsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UsersServlet</servlet-name>
+        <url-pattern>/userAdmin</url-pattern>
     </servlet-mapping>
 
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
-
-    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
 </web-app>
