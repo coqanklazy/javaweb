@@ -84,10 +84,10 @@ public class EmailListServlet extends HttpServlet {
                 
                 // --- GỬI EMAIL HTML ---
                 String to = email;
-                String from = "lequanghung.work@gmail.com"; 
+                String from = "leduyhung412max@gmail.com";
                 String subject = "Welcome to our email list";
                 String body = createHtmlEmailBody(firstName);
-                boolean isBodyHTML = true; 
+                boolean isBodyHTML = true;
 
                 try {
                     MailUtilGmail.sendMail(to, from, subject, body, isBodyHTML);
@@ -116,55 +116,42 @@ public class EmailListServlet extends HttpServlet {
      */
     private String createHtmlEmailBody(String name) {
         StringBuilder sb = new StringBuilder();
-        
+
         // Wrapper: bg-gray-100 (màu nền xám nhẹ)
         sb.append("<div style=\"background-color: #f3f4f6; padding: 40px 0; font-family: sans-serif;\">");
-        
+
         // Container: max-w-md, mx-auto (căn giữa)
         sb.append("  <div style=\"max-width: 600px; margin: 0 auto; padding: 0 20px;\">");
-        
+
         // Card: bg-white, rounded-lg, shadow-lg (thẻ trắng, bo góc, đổ bóng)
         sb.append("    <div style=\"background-color: #ffffff; padding: 32px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);\">");
-        
+
         // Header (Logo text): text-blue-600, font-bold, text-2xl
         sb.append("      <h2 style=\"color: #2563eb; font-size: 24px; font-weight: bold; margin-top: 0; margin-bottom: 24px; text-align: center;\">Email List</h2>");
-        
+
         // Divider
         sb.append("      <div style=\"border-bottom: 1px solid #e5e7eb; margin-bottom: 24px;\"></div>");
-        
+
         // Greeting: text-gray-800
         sb.append("      <p style=\"font-size: 16px; color: #1f2937; margin-bottom: 16px;\">Dear <strong>").append(name).append("</strong>,</p>");
-        
+
         // Body Text: text-gray-600
         sb.append("      <p style=\"font-size: 16px; color: #4b5563; line-height: 1.5; margin-bottom: 16px;\">");
         sb.append("        Thanks for joining our email list. We'll make sure to send you announcements about new products and promotions.");
         sb.append("      </p>");
-        
+
         sb.append("      <p style=\"font-size: 16px; color: #4b5563; line-height: 1.5; margin-bottom: 32px;\">");
         sb.append("        Have a great day and thanks again!");
         sb.append("      </p>");
-        
+
         // Button (Call to action): bg-blue-600, text-white, rounded
         sb.append("      <div style=\"text-align: center; margin-bottom: 32px;\">");
 //        sb.append("        <a href=\"#\" style=\"background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;\">Visit Website</a>");
         sb.append("      </div>");
-        
-        // Footer: text-sm, text-gray-500
-        sb.append("      <div style=\"border-top: 1px solid #e5e7eb; padding-top: 24px; text-align: center;\">");
-        sb.append("        <p style=\"font-size: 14px; color: #6b7280; font-weight: bold; margin: 0;\">Hung Le Quang</p>");
-        sb.append("        <p style=\"font-size: 14px; color: #9ca3af; margin: 4px 0 0 0;\">From HCMUTE with love</p>");
-        sb.append("      </div>");
-        
-        sb.append("    </div>"); // End Card
-        
-        // Footer Note outside card
-        sb.append("    <p style=\"text-align: center; font-size: 12px; color: #9ca3af; margin-top: 24px;\">");
-        sb.append("      &copy; 2025 Hung Le Quang. All rights reserved.");
-        sb.append("    </p>");
-        
+
         sb.append("  </div>"); // End Container
         sb.append("</div>"); // End Wrapper
-        
+
         return sb.toString();
     }
 

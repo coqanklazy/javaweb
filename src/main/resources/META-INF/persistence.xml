@@ -10,10 +10,10 @@
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     
     <properties>
-      <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-      <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://pg-86c5d38-lequanghung-400.g.aivencloud.com:23856/send_email?ssl=require"/>
+      <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://mysql-35e9f5d5-truongconganh5575-46a6.g.aivencloud.com:24419/murach?autoReconnect=true"/>
       <property name="jakarta.persistence.jdbc.user" value="avnadmin"/>
-      <property name="jakarta.persistence.jdbc.password" value="AVNS_0WAsdbTz6Tp-HGUKKSc"/>
+      <property name="jakarta.persistence.jdbc.password" value="AVNS_HQBV0sQYFdS5vf7bfQH"/>
 
       <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
       

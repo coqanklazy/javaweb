@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Tối ưu cho PostgreSQL (SERIAL/BIGSERIAL)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     
     private String email;
